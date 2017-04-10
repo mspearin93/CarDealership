@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="HomeController">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="ngApp/app.css" />
+
+    <base href="/" />
+</head>
+
+<body ng-controller="homeController as vm">
+
+   <p>
+      <h3>Choose your car make:</h3>
+      <label for="make"></label>
+      <select id="make" ng-model="controller.search" ng-change="controller.fetch()">
+          <option></option>
+          <option>MINI</option>
+          <option>Tesla</option>
+      </select>
+   </p>
+
+<hr>
+    <h3>Search for your car:</h3>
+  <input ng-model="controller.search" ng-model-options="{debounce:1000}" ng-change="controller.fetch()"/>
+<hr>
+
+<h3>Here are the cars:</h3>
+<ul>
+  <li ng-repeat="car in controller.cars">
+      {{car.ShortDescription}}
+  </li>
+</ul>
+
+<ui-view></ui-view>
+<a ui-sref="home.terms">Terms and conditions</a>
+
+    <!-- Standard angular files -->
+    <script src="bower_components/angular/angular.js"></script>
+
+    <!-- Required for angular-material -->
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- app files -->
+    <script src="ngApp/app.js"></script>
+    <script src="ngApp/controllers/controllers.js"></script>
+</body>
+</html>

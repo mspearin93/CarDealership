@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="HomeController">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="ngApp/app.css" />
+
+    <base href="/" />
+</head>
+
+<body ng-controller="homeController as vm">
+
+
+<h2><u>Welcome to Timeless Motors</u></h2>
+<h3>We always make sure you get the deal of a lifetime!</h3>
+<hr style="border: 1px solid SlateGray"/>
+
+   <p>
+      <h3>Choose your car make:</h3>
+      <select id="make" ng-model="controller.name" ng-change="controller.fetchbyID()">
+        <option ng-repeat="make in controller.makes">{{make.name}}</option>
+      </select>
+   </p>
+
+<hr style="border: 1px solid SlateGray"/>
+    <h3>Search for your perfect car:</h3>
+    <input ng-model="controller.search" ng-model-options="{debounce:1000}" ng-change="controller.fetch()"/>
+<hr style="border: 1px solid SlateGray"/>
+
+<h3>Our available cars:</h3>
+<h5>(Click on a car for more information!)</h5>
+<ul>
+  <li ng-repeat="car in controller.cars">
+      <md-button class="md-raised" ng-click="controller.openDialog(car)">{{car.ShortDescription}}</md-button>
+  </li>
+</ul>
+
+
+    <script src="bower_components/angular/angular.js"></script>
+
+
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="ngApp/app.js"></script>
+    <script src="ngApp/controllers/controllers.js"></script>
+</body>
+</html>

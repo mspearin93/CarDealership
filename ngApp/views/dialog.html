@@ -1,0 +1,17 @@
+<md-dialog>
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <h3>Here are the details of your car:</h3>
+
+      <p>Short Description: {{dialog.car.ShortDescription}}</p>
+      <p>More details: {{dialog.car.FullDescription}}</p>
+      <p>Price: ${{dialog.car.Price}}</p>
+      <img src={{dialog.car.ImageUrl}} alt="Car Image" height="120" width="180">
+
+      <hr style="border: 1px solid Red"/>
+
+      <md-button class="md-raised" ng-click="dialog.close()">Close</md-button>
+
+    </div>
+  </md-dialog-content>
+</md-dialog>
