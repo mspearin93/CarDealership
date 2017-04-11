@@ -71,7 +71,7 @@ input:-webkit-autofill {
   width: 1px; }
 
 .md-shadow {
-  position: absolute;
+  position: left;
   top: 0;
   left: 0;
   bottom: 0;
@@ -95,7 +95,7 @@ input:-webkit-autofill {
  */
 .md-ripple-container {
   pointer-events: none;
-  position: absolute;
+  position: left;
   overflow: hidden;
   left: 0;
   top: 0;
@@ -105,7 +105,7 @@ input:-webkit-autofill {
   transition: all 0.55s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .md-ripple {
-  position: absolute;
+  position: left;
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
   -webkit-transform-origin: 50% 50%;
@@ -145,7 +145,7 @@ input:-webkit-autofill {
   margin: 8px; }
 
 .md-scroll-mask {
-  position: absolute;
+  position: left;
   background-color: transparent;
   top: 0;
   right: 0;
@@ -757,7 +757,7 @@ button.md-button::-moz-focus-inner {
   /** Custom styling for button */
   padding: 0 6px;
   margin: 6px 8px;
-  background: transparent;
+  background: red;
   color: currentColor;
   white-space: nowrap;
   /* Uppercase text content */

@@ -1,8 +1,8 @@
 *
 
 body {
-  background-color:lightblue;
-  
+
+
 
 }
 
@@ -11,7 +11,8 @@ body {
 }
 
 h2, h3, h5 {
-    text-align: center;
+    text-align: left;
+
 }
 
 input, select {
@@ -19,11 +20,11 @@ input, select {
     margin: 0 auto;
 }
 
-ul { list-style: none; position: relative; float: left; display: block; left: 40%; }
+ul { list-style: none; position: left; float: left; display: block; left: 10%; }
 
 .Modal-backdrop
 {
- position: fixed;
+ position: left;
  top: 0px;
  left: 0px;
  height:100%;
@@ -35,7 +36,7 @@ ul { list-style: none; position: relative; float: left; display: block; left: 40
 
 .Modal-holder
 {
-  position: fixed;
+  position: left;
   top: 0px;
   left: 0px;
   height:100%;
@@ -50,17 +51,17 @@ ul { list-style: none; position: relative; float: left; display: block; left: 40
   margin: 0 auto;
   width: 100%;
   background: #fff;
-  padding: 15px;
+  padding: 10px;
   border-radius: 4px;
   box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
-  position: relative;
+  position: left;
 }
 
 @media screen and (min-width: 992px)
 {
   .Modal-box
   {
-    width: 50%;
-    padding: 30px;
+    width: 30%;
+    padding: 10px;
   }
 }

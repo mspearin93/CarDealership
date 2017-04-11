@@ -1,11 +1,11 @@
 "use strict";
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var index_1 = require('./routes/index');
-var users_1 = require('./routes/users');
+var express = require("express");
+var path = require("path");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
+var index_1 = require("./routes/index");
+var users_1 = require("./routes/users");
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

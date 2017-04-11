@@ -1,5 +1,5 @@
 "use strict";
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 var movies = [
     { id: 1, title: "Star Wars", director: "Lucas" },

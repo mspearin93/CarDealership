@@ -1,5 +1,5 @@
 "use strict";
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 var entries = [
     { id: 1, author: 'Stephen', dateCreated: new Date('12/1/2015'), message: 'Hello from Stephen!' },
